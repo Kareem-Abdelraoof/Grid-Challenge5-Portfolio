@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body>div {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-auto-rows: 25vh;
+}
+
+nav {
+    background-color: #124559;
+    grid-row: span 4;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+
+div.nav {
+    display: inline;
+    align-self: start;
+    justify-self: start;
+}
+
+.header {
+    grid-row: span 3;
+}
+
+.footer {
+    align-self: end;
+    color: #eff6e0;
+}
+
+a {
+    text-decoration: none;
+    color: #aec3b0;
+    margin-right: 20px;
+}
+
+div.header h1 {
+    color: lightgray;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+div.header p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #eff6e0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.first-pic {
+    grid-column: 2;
+    grid-row: 1/span 3;
+}
+
+.sec-text {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.third-text {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.second-pic {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+}
+
+.grid-text {
+    padding: 50px;
+    color: #598392;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:1100px) {
+    body>div {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .second-pic {
+        grid-row: 5 / span 2;
+        grid-column: 2;
+    }
+
+    .third-text {
+        grid-row: 5 / span 2;
+        grid-column: 1;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    body>div {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .first-pic {
+        grid-row: 5 / span 2;
+        grid-column: 1;
+    }
+
+    .sec-text {
+        grid-row: 7 / span 1;
+        grid-column: 1;
+    }
+
+    .second-pic {
+        grid-row: 8/span 2;
+        grid-column: 1;
+    }
+
+    .third-text {
+        grid-row: 10/span 1;
+        grid-column: 1;
+    }
+}
